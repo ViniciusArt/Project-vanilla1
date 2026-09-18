@@ -14,13 +14,44 @@
 <body>
     <h1>To-do list</h1>
     <input type="text" placeholder="Adicionar tarefa" id="add-tarefa"> <input type="button" value="OK" id="btnOK">
+        <input type="button" value="Excluir concluidos" id="btnDelete">
     <ul class="lista"></ul>
+
     <script>
         let botao = document.querySelector('#btnOK');
+        let itens_lista = document.querySelector('.lista'); //commitar q movi essa variavel para fora da função
         botao.addEventListener('click', RunBtn)
         let tarefas = []
-        
+
+        document.querySelector('#btnDelete').addEventListener('click', function deletar(excluir){ //so funciona quando ao menos 1 item foi marcado
+                
+                    if(tarefas.concluida === true){
+                    console.log(`apagando ${dataset.id}`)  //RESOLVER O PROBLEMA DESSA FUNÇÃO!!!
+                    dataset.id.innerHTML = ''
+                       
+                }
+
+            })
+
+
+        itens_lista.addEventListener('click', function marcados(checked){
+            let nItem = parseInt(checked.target.dataset.id)
+
+             
+                if (checked.target.type === 'checkbox'){
+                console.log(checked.target.dataset.id) //LEMBRAR QUE ISSO PEGA O ID DO CHECK
+                tarefas[nItem].concluida = !tarefas[nItem].concluida //atencao
+
+                 
+
+                }
+
+               
+        })
+
         function RunBtn(event){
+            let itemID = tarefas.length; //Isso me diz qual item é esse dentro do array para manipula-lo
+            console.log(itemID)
             let addTarefa = document.querySelector('#add-tarefa');
             let tarefaTXT = {
             texto: addTarefa.value,
@@ -29,15 +60,14 @@
             tarefas.push(tarefaTXT)
             
             let task = document.createElement('li');
-            task.innerHTML =  `<input type="checkbox"> ${tarefaTXT.texto}`
-            let itens_lista = document.querySelector('.lista');
+            task.innerHTML =  `<input type="checkbox" data-id="${itemID}"> ${tarefaTXT.texto}` //"data-id" foi a formar de identificar no HTML o itemID do js
+            
             itens_lista.appendChild(task) //coloca o elemtento <li> dentro do ul
             console.log(tarefas.at(-1))
-                //teste na botaoCheckout
-            
-            
-            
+                
         }
+        
+            
     
     </script>
 
