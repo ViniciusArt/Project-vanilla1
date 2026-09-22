@@ -1,0 +1,22 @@
+body
+{
+    background-color: blueviolet;    
+    color: aliceblue;
+}
+
+#principal{ /*titulo*/
+  text-align: center;
+}
+
+.lista li{
+  display: flex;
+  justify-content: center;
+}
+.container-center{
+  display: flex;
+  justify-content: center;  
+}
+
+h1{
+  text-align: center;
+}
