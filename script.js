@@ -67,7 +67,7 @@
             tarefas.push(tarefaTXT)
             
             let task = document.createElement('li');
-            task.innerHTML =  `<input type="checkbox" data-id="${itemID}"> ${tarefaTXT.texto}` //"data-id" foi a formar de identificar no HTML o itemID do js
+            task.innerHTML =  `<input type="checkbox" data-id="${itemID}"> <span>${tarefaTXT.texto}</span>` //"data-id" foi a formar de identificar no HTML o itemID do js
             
             itens_lista.appendChild(task) //coloca o elemtento <li> dentro do ul
             console.log(tarefas.at(-1))
