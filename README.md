@@ -21,3 +21,4 @@ Como a ideia é ser um projeto vanilla de iniciante, utilizei JavaScript puro ju
 Antes de iniciar o projeto eu quase não sabia nada sobre CSS. Aprendi a usar os seletores e as prioridades que o CSS dá a depender do que definimos no escopo. Tudo o que está lá eu fui aprendendo ao decorrer dos estudos, conforme as necessidades do projeto foram surgindo.
 
 Aprendi também a usar `data-id` no HTML e `dataset` para ler o `data-id` no JS.
+<img width="509" height="317" alt="image" src="https://github.com/user-attachments/assets/99f2bea7-bd62-4ea4-960b-4d1c33a73cf8" />
